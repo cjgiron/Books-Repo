@@ -34,14 +34,14 @@ public class BookService {
         }
     }
     
-    public Book updateBook(Long id, String title, String description, String lang, Integer pages) {
+    public Book updateBook(Long id, String title, String desc, String language, Integer numOfPages) {
     	Book b = this.findBook(id);
     	
     	b.setId(id);
     	b.setTitle(title);
-    	b.setDescription(description);
-    	b.setLanguage(lang);
-    	b.setNumberOfPages(pages);
+    	b.setDescription(desc);
+    	b.setLanguage(language);
+    	b.setNumberOfPages(numOfPages);
     	
     	return bookRepository.save(b);
     }
